@@ -9,8 +9,8 @@ export default function Header() {
     <nav className="bg-surface dark:bg-surface-container-high border-b border-outline-variant dark:border-outline w-full px-margin-mobile md:px-margin-desktop py-4 max-w-full mx-auto z-50 sticky top-0">
       <div className="flex justify-between items-center">
         <div className="text-headline-md font-headline-md font-black text-secondary dark:text-secondary-fixed-dim tracking-tight flex items-center">
-          <Link href="/" className="flex items-center justify-center w-48 h-16 relative">
-            <img src="/logo.jpg" alt="Transportes Flores" className="absolute w-full h-full object-contain mix-blend-multiply scale-[3] transform-gpu pointer-events-none" />
+          <Link href="/" className="flex items-center justify-center w-48 h-16 relative overflow-hidden">
+            <img src="/logo.jpg" alt="Transportes Flores" className="absolute w-full h-full object-contain mix-blend-multiply scale-[3] pointer-events-none" />
           </Link>
         </div>
         
