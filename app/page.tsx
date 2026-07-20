@@ -31,23 +31,26 @@ export default function Home() {
       {/* 2. Hero Section */}
       <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center bg-inverse-surface overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover opacity-50 scale-105 transition-transform duration-[20s] ease-out hover:scale-110" alt="Logistics vehicle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiBZ8_hvGeHawV34s2qCxQ47pbuQkXS86FyntPf6XGmrd2jFhB2eTrw4eNCj25XdapJ2VehtbjZdJN0TGg5QPEXhP8MxaoGHCaIL8eSHTmyu1C-2UlTri6MuZeiAmKRhk2T8gFZ22U9Gr0Wf3iNAzyAfBUir_HEyI3SeO2vTPnBSeliAUyvsiQtbAlIVuFl_NiS9m2NmDWx-2WyVAnv4VeDK7OSC4sy-LG3ekB1-zLgtFbzrriFWZRL0A71aXUsPJtIKqDSTllCR4" />
-          <div className="absolute inset-0 bg-gradient-to-r from-on-surface/95 via-on-surface/80 to-on-surface/40"></div>
+          <img className="w-full h-full object-cover opacity-80 scale-105 transition-transform duration-[20s] ease-out hover:scale-110" alt="Logistics vehicle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiBZ8_hvGeHawV34s2qCxQ47pbuQkXS86FyntPf6XGmrd2jFhB2eTrw4eNCj25XdapJ2VehtbjZdJN0TGg5QPEXhP8MxaoGHCaIL8eSHTmyu1C-2UlTri6MuZeiAmKRhk2T8gFZ22U9Gr0Wf3iNAzyAfBUir_HEyI3SeO2vTPnBSeliAUyvsiQtbAlIVuFl_NiS9m2NmDWx-2WyVAnv4VeDK7OSC4sy-LG3ekB1-zLgtFbzrriFWZRL0A71aXUsPJtIKqDSTllCR4" />
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-          <div className="md:col-span-8 lg:col-span-7 space-y-md">
-            <h1 className="text-display-lg font-display-lg text-on-primary tracking-tight drop-shadow-md">Soluciones Logísticas a Gran Escala y Conectividad Nacional</h1>
-            <p className="text-body-lg font-body-lg text-surface-variant max-w-2xl drop-shadow">Seguridad, puntualidad y tecnología de vanguardia para mover tu negocio.</p>
-            <div className="pt-sm flex flex-wrap gap-sm">
-              <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-button text-button transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/40 active:scale-95 flex items-center gap-2 group">
-                <span>Iniciar Operación</span>
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </button>
-              <button className="border border-on-primary text-on-primary px-8 py-4 rounded-xl font-button text-button transition-all duration-300 hover:bg-on-primary hover:text-on-surface flex items-center gap-2 backdrop-blur-sm bg-white/5">
-                <span className="material-symbols-outlined">play_circle</span>
-                <span>Ver Video Institucional</span>
-              </button>
-            </div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center text-center">
+          <h1 className="text-display-lg font-display-lg text-on-primary tracking-tight drop-shadow-md mb-4 max-w-4xl">
+            Soluciones Logísticas a Gran Escala y Conectividad Nacional
+          </h1>
+          <p className="text-body-lg font-body-lg text-surface-variant max-w-2xl drop-shadow mb-10">
+            Seguridad, puntualidad y tecnología de vanguardia para mover tu negocio.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            <a href="/quienes-somos" className="bg-primary text-white px-8 py-3 md:py-4 rounded font-button text-button transition-all duration-300 hover:bg-primary-container hover:scale-105 shadow-lg flex items-center justify-center">
+              SOBRE NOSOTROS
+            </a>
+            <a href="/contacto" className="bg-secondary text-white px-8 py-3 md:py-4 rounded font-button text-button transition-all duration-300 hover:bg-secondary-container hover:scale-105 shadow-lg flex items-center justify-center">
+              CONTACTO
+            </a>
+            <button onClick={() => document.getElementById('cotizacion')?.scrollIntoView({ behavior: 'smooth' })} className="bg-white text-primary px-8 py-3 md:py-4 rounded font-button text-button font-bold transition-all duration-300 hover:bg-gray-100 hover:scale-105 shadow-lg flex items-center justify-center">
+              COTIZA
+            </button>
           </div>
         </div>
       </section>
