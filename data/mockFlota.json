@@ -1,0 +1,44 @@
+[
+  {
+    "id": "trk-001",
+    "nombre": "Unidad 502 - Caja Seca 53'",
+    "capacidad": "30 Toneladas",
+    "url": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "gps_status": "En Tránsito"
+  },
+  {
+    "id": "trk-002",
+    "nombre": "Unidad 410 - Refrigerado 48'",
+    "capacidad": "25 Toneladas",
+    "url": "https://images.unsplash.com/photo-1519003722824-194d4455aeb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "gps_status": "Disponible"
+  },
+  {
+    "id": "trk-003",
+    "nombre": "Unidad 305 - Plataforma",
+    "capacidad": "35 Toneladas",
+    "url": "https://images.unsplash.com/photo-1590634626156-f40c749962a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "gps_status": "Mantenimiento"
+  },
+  {
+    "id": "trk-004",
+    "nombre": "Unidad 601 - Caja Seca 53'",
+    "capacidad": "30 Toneladas",
+    "url": "https://images.unsplash.com/photo-1616431940984-754641ba0eeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "gps_status": "En Tránsito"
+  },
+  {
+    "id": "trk-005",
+    "nombre": "Unidad 215 - Material Peligroso",
+    "capacidad": "20 Toneladas",
+    "url": "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "gps_status": "Disponible"
+  },
+  {
+    "id": "trk-006",
+    "nombre": "Unidad 720 - Full (Doble Remolque)",
+    "capacidad": "60 Toneladas",
+    "url": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "gps_status": "En Tránsito"
+  }
+]
