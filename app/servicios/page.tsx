@@ -71,9 +71,9 @@ export default function ServiciosPage() {
               Unidades y operadores asignados exclusivamente a tu empresa, con disponibilidad, flexibilidad y atención personalizada.
             </p>
           </div>
-          <button className="relative z-10 bg-white text-secondary px-8 py-4 rounded-xl font-button text-button hover:bg-surface-container-low transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap">
+          <a href="/#cotizacion" className="relative z-10 bg-white text-secondary px-8 py-4 rounded-xl font-button text-button hover:bg-surface-container-low transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap inline-flex justify-center items-center">
             Solicitar Cotización
-          </button>
+          </a>
         </div>
       </section>
 

@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* 3. Quick Quote Widget */}
-      <section className="relative z-20 -mt-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full">
+      <section id="cotizacion" className="relative z-20 -mt-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full">
         <div className="bg-surface/85 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/40 p-md transition-all duration-500 hover:shadow-primary/10 hover:-translate-y-1">
           <div className="mb-sm text-secondary font-headline-md text-headline-md flex items-center gap-xs">
             <span className="material-symbols-outlined text-primary">calculate</span>

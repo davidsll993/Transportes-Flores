@@ -25,12 +25,9 @@ export default function Header() {
         </div>
         
         <div className="hidden md:flex gap-sm">
-          <Link href="/login" className="text-secondary border border-secondary bg-transparent hover:bg-surface-container-low px-4 py-2 rounded font-button text-button transition-transform active:scale-95 inline-flex items-center justify-center">
-            Iniciar Sesión
-          </Link>
-          <button className="bg-primary text-on-primary hover:bg-primary-container px-4 py-2 rounded font-button text-button transition-transform active:scale-95">
+          <Link href="/#cotizacion" className="bg-primary text-on-primary hover:bg-primary-container px-4 py-2 rounded font-button text-button transition-transform active:scale-95 inline-flex items-center justify-center">
             Solicitar Cotización
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -49,8 +46,7 @@ export default function Header() {
           <Link onClick={() => setIsOpen(false)} className="text-on-surface py-2 px-4 hover:bg-surface-container-low rounded" href="/bolsa-de-trabajo">Bolsa de Trabajo</Link>
           <Link onClick={() => setIsOpen(false)} className="text-on-surface py-2 px-4 hover:bg-surface-container-low rounded" href="/contacto">Contacto</Link>
           <div className="flex flex-col gap-2 mt-4 md:hidden">
-            <button className="bg-primary text-on-primary py-3 rounded font-button text-button shadow-lg active:scale-95 transition-transform">Solicitar Cotización</button>
-            <Link onClick={() => setIsOpen(false)} href="/login" className="text-center text-secondary border border-secondary py-3 rounded font-button text-button hover:bg-surface-container-low transition-colors active:scale-95">Iniciar Sesión</Link>
+            <Link onClick={() => setIsOpen(false)} href="/#cotizacion" className="text-center bg-primary text-on-primary py-3 rounded font-button text-button shadow-lg active:scale-95 transition-transform inline-block">Solicitar Cotización</Link>
           </div>
         </div>
       )}
