@@ -105,15 +105,58 @@ export default function FlotaPage() {
           
           {/* Mockup visual */}
           <div className="flex-1 w-full flex justify-center relative z-10">
-            <div className="w-64 h-[500px] bg-black rounded-[2.5rem] border-8 border-surface-container-high shadow-2xl relative overflow-hidden flex flex-col group-hover:-translate-y-4 transition-transform duration-700">
-              <div className="absolute top-0 w-full h-6 bg-black z-20 flex justify-center">
-                <div className="w-1/3 h-4 bg-surface-container-high rounded-b-xl"></div>
+            <div className="w-72 h-[500px] bg-slate-900 rounded-[2.5rem] border-[10px] border-slate-800 shadow-2xl relative overflow-hidden flex flex-col group-hover:-translate-y-4 transition-transform duration-700">
+              {/* Phone Notch */}
+              <div className="absolute top-0 inset-x-0 h-7 flex justify-center z-30">
+                <div className="w-1/3 h-full bg-slate-800 rounded-b-xl"></div>
               </div>
-              <div className="flex-1 bg-surface-container flex flex-col items-center justify-center relative">
-                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(#000 1px, transparent 1px)", backgroundSize: "10px 10px" }}></div>
-                 <span className="material-symbols-outlined text-6xl text-primary animate-bounce relative z-10">pin_drop</span>
-                 <div className="w-32 h-32 bg-primary/20 rounded-full absolute animate-ping"></div>
-                 <div className="mt-4 font-bold text-on-surface relative z-10 bg-white/80 px-4 py-1 rounded-full text-sm shadow">GPS 24/7 Activo</div>
+              
+              {/* Map Background Pattern */}
+              <div className="absolute inset-0 z-0 bg-slate-900" style={{
+                backgroundImage: `
+                  linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                  linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)
+                `,
+                backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px',
+                backgroundPosition: '-2px -2px, -2px -2px, -1px -1px, -1px -1px'
+              }}></div>
+              
+              {/* Simulated Route Line */}
+              <svg className="absolute inset-0 w-full h-full z-0 opacity-40" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M 20 80 Q 40 50, 80 20" fill="none" stroke="#e01a22" strokeWidth="1.5" strokeDasharray="3,3" className="animate-pulse" />
+              </svg>
+
+              {/* Marker & Radar */}
+              <div className="flex-1 flex flex-col items-center justify-center relative z-10 mt-8">
+                 {/* Radar Ping */}
+                 <div className="w-32 h-32 bg-primary/10 border border-primary/30 rounded-full absolute animate-[ping_3s_ease-in-out_infinite]"></div>
+                 <div className="w-20 h-20 bg-primary/20 rounded-full absolute animate-[ping_3s_ease-in-out_infinite_1s]"></div>
+                 
+                 {/* Pin */}
+                 <div className="relative z-10 flex flex-col items-center">
+                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-primary">
+                     <span className="material-symbols-outlined text-primary text-xl">local_shipping</span>
+                   </div>
+                   <div className="w-2 h-2 bg-primary rounded-full mt-1 animate-pulse"></div>
+                 </div>
+                 
+                 {/* Status Card */}
+                 <div className="absolute bottom-8 left-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl text-left">
+                   <div className="flex justify-between items-center mb-2">
+                     <span className="text-white font-bold text-sm">Unidad 145</span>
+                     <span className="flex h-2 w-2 relative">
+                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                       <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                     </span>
+                   </div>
+                   <div className="text-white/70 text-xs mb-1">Ruta: CDMX - MTY</div>
+                   <div className="text-white/70 text-xs flex justify-between">
+                     <span>Velocidad: 78 km/h</span>
+                     <span className="text-green-400 font-medium">En tiempo</span>
+                   </div>
+                 </div>
               </div>
             </div>
           </div>
