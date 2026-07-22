@@ -111,50 +111,31 @@ export default function FlotaPage() {
                 <div className="w-1/3 h-full bg-slate-800 rounded-b-xl"></div>
               </div>
               
-              {/* Map Background Pattern */}
-              <div className="absolute inset-0 z-0 bg-slate-900" style={{
-                backgroundImage: `
-                  linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-                  linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)
-                `,
-                backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px',
-                backgroundPosition: '-2px -2px, -2px -2px, -1px -1px, -1px -1px'
-              }}></div>
+              {/* Map Background Image */}
+              <img className="absolute inset-0 w-full h-full object-cover z-0 opacity-90 transition-transform duration-[10s] hover:scale-110" src="/modern-gps-map.png" alt="GPS Map Interface" />
               
-              {/* Simulated Route Line */}
-              <svg className="absolute inset-0 w-full h-full z-0 opacity-40" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M 20 80 Q 40 50, 80 20" fill="none" stroke="#e01a22" strokeWidth="1.5" strokeDasharray="3,3" className="animate-pulse" />
-              </svg>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/40 z-10 pointer-events-none"></div>
 
-              {/* Marker & Radar */}
-              <div className="flex-1 flex flex-col items-center justify-center relative z-10 mt-8">
-                 {/* Radar Ping */}
-                 <div className="w-32 h-32 bg-primary/10 border border-primary/30 rounded-full absolute animate-[ping_3s_ease-in-out_infinite]"></div>
-                 <div className="w-20 h-20 bg-primary/20 rounded-full absolute animate-[ping_3s_ease-in-out_infinite_1s]"></div>
-                 
-                 {/* Pin */}
-                 <div className="relative z-10 flex flex-col items-center">
-                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-primary">
-                     <span className="material-symbols-outlined text-primary text-xl">local_shipping</span>
-                   </div>
-                   <div className="w-2 h-2 bg-primary rounded-full mt-1 animate-pulse"></div>
-                 </div>
-                 
-                 {/* Status Card */}
-                 <div className="absolute bottom-8 left-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl text-left">
-                   <div className="flex justify-between items-center mb-2">
-                     <span className="text-white font-bold text-sm">Unidad 145</span>
-                     <span className="flex h-2 w-2 relative">
-                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                       <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              {/* Status Card Overlay */}
+              <div className="flex-1 flex flex-col items-center justify-end relative z-20 pb-8">
+                 <div className="mx-4 bg-slate-900/60 backdrop-blur-xl border border-white/10 p-4 rounded-2xl shadow-2xl text-left w-11/12 transform transition-all duration-300 hover:-translate-y-2">
+                   <div className="flex justify-between items-center mb-3">
+                     <span className="text-white font-bold text-sm tracking-wide">UNIDAD 145</span>
+                     <span className="flex h-2.5 w-2.5 relative">
+                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
                      </span>
                    </div>
-                   <div className="text-white/70 text-xs mb-1">Ruta: CDMX - MTY</div>
-                   <div className="text-white/70 text-xs flex justify-between">
-                     <span>Velocidad: 78 km/h</span>
-                     <span className="text-green-400 font-medium">En tiempo</span>
+                   <div className="text-white/90 text-xs mb-2 flex items-center gap-2">
+                     <span className="material-symbols-outlined text-sm text-primary">route</span>
+                     Ruta: CDMX - MTY
+                   </div>
+                   <div className="text-white/90 text-xs flex justify-between items-center bg-white/5 p-2 rounded-lg">
+                     <span className="flex items-center gap-1">
+                       <span className="material-symbols-outlined text-sm text-primary">speed</span>
+                       78 km/h
+                     </span>
+                     <span className="text-primary font-medium bg-primary/20 px-2 py-0.5 rounded-full text-[10px] uppercase">En Ruta</span>
                    </div>
                  </div>
               </div>
