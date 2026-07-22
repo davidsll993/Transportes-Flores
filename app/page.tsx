@@ -31,7 +31,7 @@ export default function Home() {
       {/* 2. Hero Section */}
       <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center bg-inverse-surface overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover opacity-80 scale-105 transition-transform duration-[20s] ease-out hover:scale-110" alt="Logistics vehicle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiBZ8_hvGeHawV34s2qCxQ47pbuQkXS86FyntPf6XGmrd2jFhB2eTrw4eNCj25XdapJ2VehtbjZdJN0TGg5QPEXhP8MxaoGHCaIL8eSHTmyu1C-2UlTri6MuZeiAmKRhk2T8gFZ22U9Gr0Wf3iNAzyAfBUir_HEyI3SeO2vTPnBSeliAUyvsiQtbAlIVuFl_NiS9m2NmDWx-2WyVAnv4VeDK7OSC4sy-LG3ekB1-zLgtFbzrriFWZRL0A71aXUsPJtIKqDSTllCR4" />
+          <img className="w-full h-full object-cover object-bottom opacity-80 scale-105 transition-transform duration-[20s] ease-out hover:scale-110" alt="Logistics vehicle" src="/hero-bg.jpg" />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center text-center">
@@ -48,7 +48,7 @@ export default function Home() {
             <a href="/contacto" className="bg-secondary text-white px-8 py-3 md:py-4 rounded font-button text-button transition-all duration-300 hover:bg-secondary-container hover:scale-105 shadow-lg flex items-center justify-center">
               CONTACTO
             </a>
-            <button onClick={() => document.getElementById('cotizacion')?.scrollIntoView({ behavior: 'smooth' })} className="bg-white text-primary px-8 py-3 md:py-4 rounded font-button text-button font-bold transition-all duration-300 hover:bg-gray-100 hover:scale-105 shadow-lg flex items-center justify-center">
+            <button onClick={() => { document.getElementById('cotizacion')?.scrollIntoView({ behavior: 'smooth' }); setTimeout(() => document.getElementById('input-nombre')?.focus(), 500); }} className="bg-white text-primary px-8 py-3 md:py-4 rounded font-button text-button font-bold transition-all duration-300 hover:bg-gray-100 hover:scale-105 shadow-lg flex items-center justify-center">
               COTIZA
             </button>
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* 3. Quick Quote Widget */}
-      <section id="cotizacion" className="relative z-20 -mt-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full">
+      <section id="cotizacion" className="relative z-20 -mt-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full scroll-mt-32">
         <div className="bg-surface/85 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/40 p-md transition-all duration-500 hover:shadow-primary/10 hover:-translate-y-1">
           <div className="mb-sm text-secondary font-headline-md text-headline-md flex items-center gap-xs">
             <span className="material-symbols-outlined text-primary">calculate</span>
@@ -69,7 +69,7 @@ export default function Home() {
                 <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Nombre Completo</label>
                 <div className="flex items-center gap-2 text-on-surface">
                   <span className="material-symbols-outlined text-tertiary text-sm">person</span>
-                  <input required value={formData.nombre} onChange={(e) => setFormData({...formData, nombre: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Juan Pérez" type="text" />
+                  <input id="input-nombre" required value={formData.nombre} onChange={(e) => setFormData({...formData, nombre: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Juan Pérez" type="text" />
                 </div>
               </div>
               <div className="industrial-border rounded-xl bg-white/90 px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
