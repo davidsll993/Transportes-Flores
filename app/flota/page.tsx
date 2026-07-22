@@ -22,6 +22,46 @@ export default function FlotaPage() {
           </p>
         </div>
       </section>
+      {/* Fleet Showcase */}
+      <section className="bg-surface py-xl border-b border-outline-variant/30">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+          <div className="mb-12 text-center md:text-left">
+            <h2 className="text-headline-lg font-headline-lg text-on-surface mb-2">Conoce Nuestras Unidades</h2>
+            <p className="text-body-lg text-on-surface-variant max-w-2xl">
+              Disponemos de tractocamiones de modelo reciente y cajas secas de 48 y 53 pies en excelentes condiciones, ideales para transportar tu carga de manera segura y eficiente a cualquier parte de la república.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-md md:h-[500px]">
+            <div className="relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer h-[400px] md:h-full">
+              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Caja Seca de 48" src="/flota-48.jpg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-lg w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+                <div className="flex justify-between items-end">
+                  <div>
+                    <span className="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 inline-block shadow-sm uppercase tracking-wide">Nuestra Flota</span>
+                    <h3 className="text-headline-lg md:text-display-sm font-headline-lg text-white">Caja Seca de 48&apos;</h3>
+                    <p className="text-white/80 font-body-md mt-2">Eficiencia y versatilidad para tus traslados.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer h-[400px] md:h-full">
+              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Caja Seca de 53" src="/flota-53.jpg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-lg w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+                <div className="flex justify-between items-end">
+                  <div>
+                    <span className="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 inline-block shadow-sm uppercase tracking-wide">Gran Volumen</span>
+                    <h3 className="text-headline-lg md:text-display-sm font-headline-lg text-white">Caja Seca de 53&apos;</h3>
+                    <p className="text-white/80 font-body-md mt-2">Máxima capacidad para operaciones a gran escala.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* GPS & Security Banner */}
       <section className="py-xl max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
