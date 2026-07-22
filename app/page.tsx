@@ -323,10 +323,10 @@ export default function Home() {
             <h2 className="text-headline-lg font-headline-lg mb-3 drop-shadow-md">¿Eres operador? Únete a la flota más grande del país</h2>
             <p className="text-on-primary/90 font-body-md text-lg font-medium">Beneficios superiores, capacitación constante y las mejores unidades.</p>
           </div>
-          <button className="bg-white/95 backdrop-blur-md text-primary px-8 py-4 rounded-xl font-button text-button hover:bg-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap flex items-center gap-2 group">
+          <a href="/bolsa-de-trabajo" className="bg-white/95 backdrop-blur-md text-primary px-8 py-4 rounded-xl font-button text-button hover:bg-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap flex items-center gap-2 group">
             <span className="material-symbols-outlined transition-transform duration-300 group-hover:rotate-12">badge</span>
             Ver Vacantes
-          </button>
+          </a>
         </div>
       </section>
     </>
