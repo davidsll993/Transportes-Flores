@@ -104,40 +104,28 @@ export default function FlotaPage() {
           </div>
           
           {/* Mockup visual */}
-          <div className="flex-1 w-full flex justify-center relative z-10">
-            <div className="w-72 h-[500px] bg-slate-900 rounded-[2.5rem] border-[10px] border-slate-800 shadow-2xl relative overflow-hidden flex flex-col group-hover:-translate-y-4 transition-transform duration-700">
-              {/* Phone Notch */}
-              <div className="absolute top-0 inset-x-0 h-7 flex justify-center z-30">
-                <div className="w-1/3 h-full bg-slate-800 rounded-b-xl"></div>
+          <div className="flex-1 w-full flex justify-center relative z-10 py-8 md:py-0">
+            <div className="relative w-full max-w-[500px] mx-auto mt-4 md:mt-0 z-10 group-hover:-translate-y-2 transition-transform duration-700">
+              {/* Laptop Mockup */}
+              <div className="bg-slate-900 p-2 md:p-3 rounded-t-2xl border-4 border-slate-800 shadow-2xl relative aspect-[16/10] overflow-hidden">
+                {/* Camera dot */}
+                <div className="absolute top-1 inset-x-0 flex justify-center">
+                  <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
+                </div>
+                <img src="/dashboard-gps.png" alt="Dashboard en Laptop" className="w-full h-full object-cover object-left-top rounded-sm mt-1" />
               </div>
-              
-              {/* Map Background Image */}
-              <img className="absolute inset-0 w-full h-full object-cover z-0 opacity-90 transition-transform duration-[10s] hover:scale-110" src="/modern-gps-map.png" alt="GPS Map Interface" />
-              
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/40 z-10 pointer-events-none"></div>
+              {/* Laptop Base */}
+              <div className="bg-slate-300 h-3 md:h-4 w-[110%] -ml-[5%] rounded-b-xl relative shadow-2xl flex justify-center border-t border-slate-400">
+                <div className="w-1/4 h-1 md:h-1.5 bg-slate-400 rounded-b-md"></div>
+              </div>
 
-              {/* Status Card Overlay */}
-              <div className="flex-1 flex flex-col items-center justify-end relative z-20 pb-8">
-                 <div className="mx-4 bg-slate-900/60 backdrop-blur-xl border border-white/10 p-4 rounded-2xl shadow-2xl text-left w-11/12 transform transition-all duration-300 hover:-translate-y-2">
-                   <div className="flex justify-between items-center mb-3">
-                     <span className="text-white font-bold text-sm tracking-wide">UNIDAD 145</span>
-                     <span className="flex h-2.5 w-2.5 relative">
-                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
-                     </span>
-                   </div>
-                   <div className="text-white/90 text-xs mb-2 flex items-center gap-2">
-                     <span className="material-symbols-outlined text-sm text-primary">route</span>
-                     Ruta: CDMX - MTY
-                   </div>
-                   <div className="text-white/90 text-xs flex justify-between items-center bg-white/5 p-2 rounded-lg">
-                     <span className="flex items-center gap-1">
-                       <span className="material-symbols-outlined text-sm text-primary">speed</span>
-                       78 km/h
-                     </span>
-                     <span className="text-primary font-medium bg-primary/20 px-2 py-0.5 rounded-full text-[10px] uppercase">En Ruta</span>
-                   </div>
-                 </div>
+              {/* Phone Mockup overlapping */}
+              <div className="absolute -bottom-10 -right-2 md:-right-8 w-28 md:w-36 h-56 md:h-72 bg-slate-900 rounded-[1.5rem] md:rounded-[2rem] border-[6px] border-slate-800 shadow-2xl overflow-hidden z-20 group-hover:-translate-y-4 transition-transform duration-700">
+                {/* Phone Notch */}
+                <div className="absolute top-0 inset-x-0 h-4 md:h-5 flex justify-center z-30">
+                  <div className="w-1/3 h-full bg-slate-800 rounded-b-xl"></div>
+                </div>
+                <img src="/dashboard-gps.png" alt="App en Celular" className="w-full h-full object-cover object-center scale-150" />
               </div>
             </div>
           </div>
