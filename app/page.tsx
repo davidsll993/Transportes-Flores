@@ -255,56 +255,33 @@ export default function Home() {
               Ver Especificaciones
             </button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-md auto-rows-[300px]">
-            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
-              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Fleet line-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Wul2uCKN7370U5Ikz7UYAOhONx1jMp_trMdZiyQzxvD1j9aldvcIICfhR49hPuvH-GssQbHHrvz3NqXNUe_SaYjKlGxGoGymuRiVyO4_m8jfRffAaWQUlgxkgZfzSxJZ0dtqoUOaE1xNEZwO6147K1CghLURXx1VTwJ79BrZVhOUGXyu7wu7a9HeW4M3O4QWqHq2de3JQMwm6aeUfbO5ENgmfPDm6AscwG1fr5T0UmMZtrQGKBu2yV2vdqR1DKF9WXcAC21IMl0" />
-              <div className="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-md w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-md md:h-[500px]">
+            <div className="relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer h-[400px] md:h-full">
+              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Caja Seca de 48" src="/flota-48.jpg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-lg w-full transform transition-transform duration-500 group-hover:-translate-y-2">
                 <div className="flex justify-between items-end">
                   <div>
-                    <span className="bg-primary/90 backdrop-blur-sm text-on-primary text-[10px] font-label-caps px-3 py-1.5 rounded-full mb-3 inline-block shadow-sm">Destacado</span>
-                    <h3 className="text-headline-md font-headline-md text-on-primary">Flota Multi-Marca Premium</h3>
-                    <p className="text-surface-variant font-body-md mt-1">Kenworth, Volvo, Freightliner</p>
+                    <span className="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 inline-block shadow-sm uppercase tracking-wide">Nuestra Flota</span>
+                    <h3 className="text-headline-lg md:text-display-sm font-headline-lg text-white">Caja Seca de 48&apos;</h3>
+                    <p className="text-white/80 font-body-md mt-2">Eficiencia y versatilidad para tus traslados.</p>
                   </div>
-                  <span className="material-symbols-outlined text-primary bg-surface/20 rounded-full p-3 backdrop-blur-md border border-white/20 shadow-lg group-hover:scale-110 transition-transform duration-300">satellite_alt</span>
                 </div>
               </div>
             </div>
-            <div className="md:row-span-2 relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer">
-              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Freightliner Cascadia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpnm6nOO3VYEtjPwx72s1fT3N9khMqnaad6AJUDJFVu8UYawwRIQC84ueAJ0oO-HhycgVPkNHbL3pUJh8zJHcvQpnD1D-FzrjvS8SakbG3Z3PxDWnAZswWoclgeJUHIEH9PE-ycaEsacyzv00Q2QXt8aWB7tMfbbUDaFPqVdUGKQFgj7glC1sV5elPqobwnTAvWGtkZ5QJjZH4zy3x9KlDr6UIBIEXEoAEo5pX3_P957kDb_41jd-tcx3_ff4DSD2gf2z4Xx7Nruk" />
-              <div className="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-md w-full transform transition-transform duration-500 group-hover:-translate-y-2">
-                <h3 className="text-headline-md font-headline-md text-on-primary">Freightliner Cascadia</h3>
-                <p className="text-surface-variant font-body-md text-sm mb-3">Caja Seca 53&apos;</p>
-                <div className="flex gap-2">
-                  <span className="border border-white/30 bg-white/10 text-on-primary text-[10px] font-label-caps px-2 py-1 rounded-sm backdrop-blur-md">GPS 24/7</span>
+            
+            <div className="relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer h-[400px] md:h-full">
+              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Caja Seca de 53" src="/flota-53.jpg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 p-lg w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+                <div className="flex justify-between items-end">
+                  <div>
+                    <span className="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 inline-block shadow-sm uppercase tracking-wide">Gran Volumen</span>
+                    <h3 className="text-headline-lg md:text-display-sm font-headline-lg text-white">Caja Seca de 53&apos;</h3>
+                    <p className="text-white/80 font-body-md mt-2">Máxima capacidad para operaciones a gran escala.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer">
-              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Cajas Secas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC95ye0lQlVRK1Q2yw4UedgYoawunqLV1HCqzOQe3VCHuLdxVttjzgaiVUlfEdUvfKiN_Nxzon4HD0KCicUgYjsUk81KkKFmHD-YfOPeVp8Qb_M05pZd25lH8DFidM4-nVKsSugZtHcT6cRaAMkTI1NYmei_sPfMz1Odnbk-mKA1tQbBGTI9GMHzlJ1pqJFzhkUrLshoRqogtJL8lfD011_hEvTLXZJoBYLkZMQHj4H6YJ-m0ABdIErk9F0Ky-sLuMLRK3Mlbj9t6o" />
-              <div className="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-sm w-full transform transition-transform duration-500 group-hover:-translate-y-1">
-                <h3 className="text-body-lg font-headline-md text-on-primary">Cajas Secas 53&apos;</h3>
-                <div className="flex gap-2 mt-1">
-                  <span className="text-primary-fixed-dim text-[10px] font-label-caps border border-primary-fixed-dim/50 px-1.5 py-0.5 rounded-sm bg-surface/10 backdrop-blur-sm">Mantenimiento Preventivo</span>
-                </div>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden rounded-3xl border border-outline-variant/20 bg-surface-container-low shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer">
-              <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Servicio Dedicado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWIoCaiT2RV2OUz-TL3hwGKAyBMURd4-cvY0YInqjke88nmJXHXDdTXC9nfdjnHP1GzYKGmeKbH7328XRqrr4zBu63LpaELELxybU5FbGR-hpHCakqqZpUextOh-fmEDRs8TgHeYzpJ43WWo0ZtJMI9B5w8tZxVR0gt7hYHsQ80GVwxfHl0U482ULf9tEbp7YTw8z5iBbyJbR-EJ05n79lO0bf9RyAEa2Nx02g_ZPbrypKdzYkIVAkMfdjZ3XLyzna2Xx2GtFA2_I" />
-              <div className="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 p-sm w-full transform transition-transform duration-500 group-hover:-translate-y-1">
-                <h3 className="text-body-lg font-headline-md text-on-primary">Servicio Dedicado</h3>
-                <div className="flex gap-2 mt-1">
-                  <span className="text-primary-fixed-dim text-[10px] font-label-caps border border-primary-fixed-dim/50 px-1.5 py-0.5 rounded-sm bg-surface/10 backdrop-blur-sm">Rutas Nacionales</span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-secondary to-tertiary-container text-on-secondary p-md rounded-3xl shadow-lg hover:shadow-xl flex flex-col justify-center items-center text-center transition-transform duration-300 hover:scale-[1.02] cursor-default border border-white/10">
-              <span className="material-symbols-outlined text-4xl mb-3 text-secondary-fixed-dim bg-white/10 p-4 rounded-full backdrop-blur-sm">verified_user</span>
-              <h3 className="text-headline-md font-headline-md mb-1 drop-shadow-sm">Unidades Aseguradas</h3>
-              <p className="text-on-secondary-fixed-variant text-sm font-body-md opacity-90">Tranquilidad en cada traslado</p>
             </div>
           </div>
           <button className="md:hidden w-full bg-secondary text-on-secondary px-6 py-4 rounded-xl font-button text-button mt-md shadow-lg active:scale-95 transition-transform">
