@@ -31,7 +31,7 @@ export default function Home() {
       {/* 2. Hero Section */}
       <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center bg-inverse-surface overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover object-bottom opacity-80 scale-105 transition-transform duration-[20s] ease-out hover:scale-110" alt="Logistics vehicle" src="/hero-bg.jpg" />
+          <img className="w-full h-full object-cover object-[center_65%] opacity-80 scale-105 transition-transform duration-[20s] ease-out hover:scale-110" alt="Logistics vehicle" src="/hero-bg.jpg" />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center text-center">
