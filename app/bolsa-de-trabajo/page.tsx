@@ -18,7 +18,7 @@ export default function BolsaDeTrabajoPage() {
     
     const text = `Hola, me interesa aplicar para una vacante en Transportes Flores.\n\n*Datos del Candidato:*\nNombre: ${nombre}\nTeléfono: ${telefono}\nCorreo: ${email}\n\n*Perfil:*\nPuesto de Interés: ${puesto}\nAños de Experiencia: ${experiencia}\n\n*Mensaje Adicional:*\n${mensaje || 'Sin mensaje adicional'}\n\n_(Adjunto mi CV en este chat)_`;
     
-    const url = `https://wa.me/527224996901?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/527291246319?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 

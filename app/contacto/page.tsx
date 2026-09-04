@@ -15,7 +15,7 @@ export default function ContactoPage() {
     const { nombre, email, telefono, asunto, mensaje } = formData;
     const subject = encodeURIComponent(asunto || 'Contacto desde Sitio Web');
     const body = encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\n\nMensaje:\n${mensaje}`);
-    window.open(`mailto:contacto@transportesflores.com?subject=${subject}&body=${body}`);
+    window.open(`mailto:contacto@floreslogistica.com?subject=${subject}&body=${body}`);
   };
 
   return (
@@ -44,7 +44,7 @@ export default function ContactoPage() {
             <span className="material-symbols-outlined text-secondary text-3xl bg-surface p-3 rounded-full shadow-sm">call</span>
             <div>
               <p className="font-label-caps text-label-caps text-on-surface-variant mb-1">Teléfono</p>
-              <p className="font-body-md text-body-md">+52 (722) 123 4567</p>
+              <p className="font-body-md text-body-md">+52 729 124 6319</p>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ export default function ContactoPage() {
             <span className="material-symbols-outlined text-secondary text-3xl bg-surface p-3 rounded-full shadow-sm">mail</span>
             <div>
               <p className="font-label-caps text-label-caps text-on-surface-variant mb-1">Correo Electrónico</p>
-              <p className="font-body-md text-body-md">contacto@transportesflores.com</p>
+              <p className="font-body-md text-body-md">contacto@floreslogistica.com</p>
             </div>
           </div>
           

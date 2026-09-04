@@ -53,10 +53,10 @@ export default function Footer() {
         <h4 className="font-label-caps text-label-caps text-primary-fixed-dim mb-4 uppercase">Contacto</h4>
         <div className="space-y-2 font-body-md text-sm text-surface-variant opacity-80">
           <p className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-[16px]">call</span> 722 499 6901
+            <span className="material-symbols-outlined text-[16px]">call</span> 729 124 6319
           </p>
           <p className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-[16px]">mail</span> administracion@tflores.mx
+            <span className="material-symbols-outlined text-[16px]">mail</span> administracion@floreslogistica.com
           </p>
         </div>
       </div>

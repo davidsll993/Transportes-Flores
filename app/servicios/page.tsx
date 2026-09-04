@@ -49,29 +49,23 @@ export default function ServiciosPage() {
             <p className="text-body-md text-on-surface-variant">Versatilidad y eficiencia para tus operaciones.</p>
           </div>
           
-          {/* Caja Seca */}
+          {/* Servicio Dedicado */}
           <div className="bg-surface-container-low rounded-3xl p-8 border border-outline-variant/30 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div className="bg-surface p-4 rounded-2xl w-max mb-6 group-hover:scale-110 transition-transform shadow-sm">
-              <span className="material-symbols-outlined text-5xl text-primary">inventory_2</span>
+              <span className="material-symbols-outlined text-5xl text-primary">support_agent</span>
             </div>
-            <h3 className="text-headline-md font-headline-md text-on-surface mb-3">Caja Seca</h3>
-            <p className="text-body-md text-on-surface-variant">Transporte seguro para todo tipo de mercancía.</p>
+            <h3 className="text-headline-md font-headline-md text-on-surface mb-3">Servicio Dedicado</h3>
+            <p className="text-body-md text-on-surface-variant">Unidades y operadores asignados exclusivamente a tu empresa, con disponibilidad, flexibilidad y atención personalizada.</p>
           </div>
         </div>
 
-        {/* Servicio Dedicado Banner */}
-        <div className="mt-8 bg-gradient-to-r from-secondary to-tertiary-container rounded-3xl p-8 md:p-12 text-on-secondary shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 group">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
-          <div className="relative z-10 max-w-2xl">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="material-symbols-outlined text-4xl bg-white/20 p-3 rounded-full backdrop-blur-md">support_agent</span>
-              <h3 className="text-headline-lg font-headline-lg drop-shadow-sm">Servicio Dedicado</h3>
-            </div>
-            <p className="text-body-lg font-medium opacity-90">
-              Unidades y operadores asignados exclusivamente a tu empresa, con disponibilidad, flexibilidad y atención personalizada.
-            </p>
-          </div>
-          <a href="/#cotizacion" className="relative z-10 bg-white text-secondary px-8 py-4 rounded-xl font-button text-button hover:bg-surface-container-low transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap inline-flex justify-center items-center">
+        {/* Botón Solicitar Cotización centrado */}
+        <div className="flex justify-center mt-12">
+          <a
+            href="/#cotizacion"
+            className="bg-primary text-white hover:bg-primary-container px-10 py-4 rounded-xl font-button text-button transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-3 group"
+          >
+            <span className="material-symbols-outlined transition-transform group-hover:scale-110">calculate</span>
             Solicitar Cotización
           </a>
         </div>

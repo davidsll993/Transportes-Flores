@@ -23,7 +23,7 @@ export default function Home() {
     e.preventDefault();
     const { nombre, empresa, direccion, origen, destino, tipo } = formData;
     const text = `Hola, quisiera cotizar un servicio.\n\n*Datos del Cliente:*\nNombre: ${nombre}\nEmpresa: ${empresa}\nDirección: ${direccion}\n\n*Detalles del Servicio:*\nOrigen: ${origen}\nDestino: ${destino}\nTipo de Unidad: ${tipo}`;
-    const url = `https://wa.me/527224996901?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/527291246319?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
   return (
@@ -55,86 +55,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Quick Quote Widget */}
-      <section id="cotizacion" className="relative z-20 -mt-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full scroll-mt-32">
-        <div className="bg-surface/85 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/40 p-md transition-all duration-500 hover:shadow-primary/10 hover:-translate-y-1">
-          <div className="mb-sm text-secondary font-headline-md text-headline-md flex items-center gap-xs">
-            <span className="material-symbols-outlined text-primary">calculate</span>
-            Cotización Rápida
-          </div>
-          <form onSubmit={handleCotizar} className="flex flex-col gap-sm">
-            {/* Fila 1: Datos del cliente */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-sm">
-              <div className="industrial-border rounded-xl bg-white/90 px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
-                <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Nombre Completo</label>
-                <div className="flex items-center gap-2 text-on-surface">
-                  <span className="material-symbols-outlined text-tertiary text-sm">person</span>
-                  <input id="input-nombre" required value={formData.nombre} onChange={(e) => setFormData({...formData, nombre: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Juan Pérez" type="text" />
-                </div>
-              </div>
-              <div className="industrial-border rounded-xl bg-white/90 px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
-                <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Empresa</label>
-                <div className="flex items-center gap-2 text-on-surface">
-                  <span className="material-symbols-outlined text-tertiary text-sm">business</span>
-                  <input required value={formData.empresa} onChange={(e) => setFormData({...formData, empresa: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Mi Empresa S.A." type="text" />
-                </div>
-              </div>
-              <div className="industrial-border rounded-xl bg-white/90 px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
-                <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Dirección</label>
-                <div className="flex items-center gap-2 text-on-surface">
-                  <span className="material-symbols-outlined text-tertiary text-sm">home</span>
-                  <input required value={formData.direccion} onChange={(e) => setFormData({...formData, direccion: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Calle, Ciudad" type="text" />
-                </div>
-              </div>
-            </div>
-            
-            {/* Fila 2: Detalles del viaje */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-sm items-end">
-              <div className="industrial-border rounded-xl bg-white/90 px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
-                <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Origen</label>
-                <div className="flex items-center gap-2 text-on-surface">
-                  <span className="material-symbols-outlined text-tertiary text-sm">location_on</span>
-                  <select required value={formData.origen} onChange={(e) => setFormData({...formData, origen: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md text-on-surface appearance-none outline-none cursor-pointer">
-                    <option value="" disabled>Selecciona un estado</option>
-                    {ESTADOS_MEXICO.filter(e => e !== "").map(estado => (
-                      <option key={estado} value={estado}>{estado}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-              <div className="industrial-border rounded-xl bg-white/90 px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
-                <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Destino</label>
-                <div className="flex items-center gap-2 text-on-surface">
-                  <span className="material-symbols-outlined text-tertiary text-sm">flag</span>
-                  <select required value={formData.destino} onChange={(e) => setFormData({...formData, destino: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md text-on-surface appearance-none outline-none cursor-pointer">
-                    <option value="" disabled>Selecciona un estado</option>
-                    {ESTADOS_MEXICO.filter(e => e !== "").map(estado => (
-                      <option key={estado} value={estado}>{estado}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-              <div className="industrial-border rounded-xl bg-white/90 px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
-                <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Tipo de Unidad/Carga</label>
-                <div className="flex items-center gap-2 text-on-surface">
-                  <span className="material-symbols-outlined text-tertiary text-sm">local_shipping</span>
-                  <select value={formData.tipo} onChange={(e) => setFormData({...formData, tipo: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md text-on-surface appearance-none outline-none cursor-pointer">
-                    <option value="Caja Seca 53'">Caja Seca 53'</option>
-                    <option value="Caja Seca 48'">Caja Seca 48'</option>
-                  </select>
-                </div>
-              </div>
-              <button className="bg-gradient-to-r from-secondary to-tertiary text-on-secondary px-6 py-4 rounded-xl font-button text-button h-full flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-secondary/30 transition-all duration-300 hover:scale-[1.02] active:scale-95" type="submit">
-                <span className="material-symbols-outlined">send</span>
-                Enviar a WhatsApp
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      {/* 4. Trust Stats */}
-      <section className="bg-gradient-to-b from-surface-container to-surface py-xl mt-lg border-y border-outline-variant/30">
+      {/* 3. Trust Stats */}
+      <section className="bg-gradient-to-b from-surface-container to-surface py-xl border-y border-outline-variant/30">
         <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center divide-x divide-outline-variant/50">
             <div className="px-sm flex flex-col items-center group cursor-default">
@@ -290,14 +212,102 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Recruitment Banner */}
+      {/* 7. Quick Quote Section */}
+      <section id="cotizacion" className="bg-gradient-to-b from-surface-container to-surface py-xl border-t border-outline-variant/30 scroll-mt-24 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+          <div className="text-center mb-10">
+            <div className="inline-block border border-primary/40 bg-primary/5 text-primary px-4 py-1.5 font-label-caps text-label-caps rounded-full uppercase tracking-widest backdrop-blur-sm mb-3">
+              Cotiza tu Envío
+            </div>
+            <h2 className="text-headline-lg font-headline-lg text-on-surface">
+              Cotización Rápida
+            </h2>
+            <p className="text-body-lg text-on-surface-variant mt-2 max-w-2xl mx-auto">
+              Ingresa los detalles de tu carga y ruta para recibir una cotización personalizada vía WhatsApp en minutos.
+            </p>
+          </div>
+
+          <div className="bg-surface/90 backdrop-blur-xl rounded-2xl shadow-xl border border-outline-variant/40 p-6 md:p-8 transition-all duration-500 hover:shadow-2xl">
+            <form onSubmit={handleCotizar} className="flex flex-col gap-sm">
+              {/* Fila 1: Datos del cliente */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-sm">
+                <div className="industrial-border rounded-xl bg-white px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
+                  <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Nombre Completo</label>
+                  <div className="flex items-center gap-2 text-on-surface">
+                    <span className="material-symbols-outlined text-tertiary text-sm">person</span>
+                    <input id="input-nombre" required value={formData.nombre} onChange={(e) => setFormData({...formData, nombre: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Juan Pérez" type="text" />
+                  </div>
+                </div>
+                <div className="industrial-border rounded-xl bg-white px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
+                  <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Empresa</label>
+                  <div className="flex items-center gap-2 text-on-surface">
+                    <span className="material-symbols-outlined text-tertiary text-sm">business</span>
+                    <input required value={formData.empresa} onChange={(e) => setFormData({...formData, empresa: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Mi Empresa S.A." type="text" />
+                  </div>
+                </div>
+                <div className="industrial-border rounded-xl bg-white px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
+                  <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Dirección</label>
+                  <div className="flex items-center gap-2 text-on-surface">
+                    <span className="material-symbols-outlined text-tertiary text-sm">home</span>
+                    <input required value={formData.direccion} onChange={(e) => setFormData({...formData, direccion: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md placeholder:text-surface-dim outline-none" placeholder="Calle, Ciudad" type="text" />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Fila 2: Detalles del viaje */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-sm items-end">
+                <div className="industrial-border rounded-xl bg-white px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
+                  <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Origen</label>
+                  <div className="flex items-center gap-2 text-on-surface">
+                    <span className="material-symbols-outlined text-tertiary text-sm">location_on</span>
+                    <select required value={formData.origen} onChange={(e) => setFormData({...formData, origen: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md text-on-surface appearance-none outline-none cursor-pointer">
+                      <option value="" disabled>Selecciona un estado</option>
+                      {ESTADOS_MEXICO.filter(e => e !== "").map(estado => (
+                        <option key={estado} value={estado}>{estado}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="industrial-border rounded-xl bg-white px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
+                  <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Destino</label>
+                  <div className="flex items-center gap-2 text-on-surface">
+                    <span className="material-symbols-outlined text-tertiary text-sm">flag</span>
+                    <select required value={formData.destino} onChange={(e) => setFormData({...formData, destino: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md text-on-surface appearance-none outline-none cursor-pointer">
+                      <option value="" disabled>Selecciona un estado</option>
+                      {ESTADOS_MEXICO.filter(e => e !== "").map(estado => (
+                        <option key={estado} value={estado}>{estado}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="industrial-border rounded-xl bg-white px-3 py-2 industrial-focus transition-all duration-300 hover:border-primary/50">
+                  <label className="block text-label-caps font-label-caps text-on-surface-variant mb-1">Tipo de Unidad/Carga</label>
+                  <div className="flex items-center gap-2 text-on-surface">
+                    <span className="material-symbols-outlined text-tertiary text-sm">local_shipping</span>
+                    <select value={formData.tipo} onChange={(e) => setFormData({...formData, tipo: e.target.value})} className="w-full bg-transparent border-none p-0 focus:ring-0 text-body-md font-body-md text-on-surface appearance-none outline-none cursor-pointer">
+                      <option value="Caja Seca 53'">Caja Seca 53'</option>
+                      <option value="Caja Seca 48'">Caja Seca 48'</option>
+                    </select>
+                  </div>
+                </div>
+                <button className="bg-gradient-to-r from-secondary to-tertiary text-on-secondary px-6 py-4 rounded-xl font-button text-button h-full flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-secondary/30 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer" type="submit">
+                  <span className="material-symbols-outlined">send</span>
+                  Enviar a WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Recruitment Banner */}
       <section className="bg-gradient-to-r from-primary via-[#9a112a] to-[#7a0b1f] text-on-primary py-xl relative overflow-hidden shadow-inner">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#fff 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
         <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left">
           <div className="max-w-2xl">
             <span className="font-label-caps text-label-caps uppercase tracking-widest text-primary-fixed-dim block mb-3 opacity-90">Bolsa de Trabajo</span>
-            <h2 className="text-headline-lg font-headline-lg mb-3 drop-shadow-md">¿Eres operador? Únete a la flota más grande del país</h2>
+            <h2 className="text-headline-lg font-headline-lg mb-3 drop-shadow-md">¿Eres operador? Únete a nuestra flota</h2>
             <p className="text-on-primary/90 font-body-md text-lg font-medium">Beneficios superiores, capacitación constante y las mejores unidades.</p>
           </div>
           <a href="/bolsa-de-trabajo" className="bg-white/95 backdrop-blur-md text-primary px-8 py-4 rounded-xl font-button text-button hover:bg-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 whitespace-nowrap flex items-center gap-2 group">
